@@ -76,8 +76,12 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="network\private\tcpClient.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="includeAll.h" />
+    <ClInclude Include="network\tcpClient.h" />
+    <ClInclude Include="stringConversion\stringConversion.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
