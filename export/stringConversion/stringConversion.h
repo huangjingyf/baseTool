@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
-##include <vector>
+#include <vector>
+#include <sstream>
 namespace baseTool
 {
 	namespace stringConversion
@@ -26,15 +27,13 @@ namespace baseTool
 		template<typename T>
 		std::string ToString(T t)
 		{
-			return string();
+			return std::string();
 		}
 
 		template<>
-		std::string ToString<string>(T t)
+		std::string ToString<std::string>(std::string t)
 		{
-			std::stringstream ss(str_raw);
-			ss << t;
-			return ss.str();
+			return t;
 		}
 
 		template<typename T>
@@ -47,13 +46,13 @@ namespace baseTool
 			while (index = str_array.find_first_of(sz_split, pre_index) != std::string::npos)
 			{
 				len = index - pre_index;
-				vs_ret.push_back(StringToT<T>str_array.substr(pre_index, len);
+				vs_ret.push_back(StringToT<T>(str_array.substr(pre_index, len)));
 				pre_index = index + 1;
 			}
 			if (pre_index < str_array.size())
 			{
 				// last one
-				vs_ret.push_back(StringToT<T>str_array.substr(pre_index);
+				vs_ret.push_back(StringToT<T>(str_array.substr(pre_index, len)));
 			}
 		}
 
