@@ -1,4 +1,5 @@
-#include "../tcpClient.h"
+#include "export/network/tcpClient.h"
+#include <string>
 namespace baseTool
 {
 	namespace network
@@ -11,7 +12,7 @@ namespace baseTool
 
 		CTCPClient::CTCPClient()
 		{
-
+			ptr_data_ = std::make_shared<CTCPClientPrivateData>();
 		}
 		CTCPClient::~CTCPClient()
 		{

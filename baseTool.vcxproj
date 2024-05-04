@@ -74,14 +74,17 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="network\private\tcpClient.cpp" />
+    <ClCompile Include="src\network\tcpClient.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="includeAll.h" />
-    <ClInclude Include="network\tcpClient.h" />
-    <ClInclude Include="stringConversion\stringConversion.h" />
+    <ClInclude Include="export\network\tcpClient.h" />
+    <ClInclude Include="export\stringConversion\stringConversion.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

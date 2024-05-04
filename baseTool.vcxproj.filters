@@ -2,37 +2,48 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="network\private\tcpClient.cpp">
-      <Filter>network\private</Filter>
+    <ClCompile Include="src\network\tcpClient.cpp">
+      <Filter>src\network</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="stringConversion">
-      <UniqueIdentifier>{98630331-8b82-450d-a507-1e7b9e942b4e}</UniqueIdentifier>
+    <Filter Include="export">
+      <UniqueIdentifier>{9ab56934-fd9d-4a63-8a70-f8309147f1ee}</UniqueIdentifier>
     </Filter>
-    <Filter Include="dateTime">
-      <UniqueIdentifier>{53f5f7c8-11b4-4c45-8fbf-944fc434cb7e}</UniqueIdentifier>
+    <Filter Include="src">
+      <UniqueIdentifier>{d42573d2-1fce-4093-9686-2b5bbbc4db25}</UniqueIdentifier>
     </Filter>
-    <Filter Include="memory">
-      <UniqueIdentifier>{ad36347e-859e-47fe-8679-a75664894971}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="network">
+    <Filter Include="src\network">
       <UniqueIdentifier>{f5c4db41-c139-43fd-8f65-e2098c21e230}</UniqueIdentifier>
     </Filter>
-    <Filter Include="thread">
+    <Filter Include="src\memory">
+      <UniqueIdentifier>{ad36347e-859e-47fe-8679-a75664894971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dateTime">
+      <UniqueIdentifier>{53f5f7c8-11b4-4c45-8fbf-944fc434cb7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\stringConversion">
+      <UniqueIdentifier>{98630331-8b82-450d-a507-1e7b9e942b4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\thread">
       <UniqueIdentifier>{799fe819-62f4-4649-8a16-eff822073ae9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="network\private">
-      <UniqueIdentifier>{6f029258-5e9b-4e10-bd10-3e6a4898bccd}</UniqueIdentifier>
+    <Filter Include="thirdParty">
+      <UniqueIdentifier>{dd9f8345-970a-470b-9cef-4d015cac69aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="export\stringConversion">
+      <UniqueIdentifier>{5f62218d-9bd4-421c-8198-bd8db7c2d62d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="export\network">
+      <UniqueIdentifier>{417a58a4-aa75-4965-b18f-4628b7832996}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stringConversion\stringConversion.h">
-      <Filter>stringConversion</Filter>
+    <ClInclude Include="export\stringConversion\stringConversion.h">
+      <Filter>export\stringConversion</Filter>
     </ClInclude>
-    <ClInclude Include="network\tcpClient.h">
-      <Filter>network</Filter>
+    <ClInclude Include="export\network\tcpClient.h">
+      <Filter>export\network</Filter>
     </ClInclude>
-    <ClInclude Include="includeAll.h" />
   </ItemGroup>
 </Project>

@@ -4,13 +4,13 @@ namespace baseTool
 {
 	namespace stringConversion
 	{
-		template<T>
+		template<typename T>
 		T StringToT(const std::string& str_raw)
 		{
 			return T();
 		}
 
-		template<T>
+		template<typename T>
 		std::string ToString(T t)
 		{
 			return string();
